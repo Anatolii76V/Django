@@ -24,7 +24,7 @@ def create_product(request):
             quantity=request.POST['quantity'],
             added_date=request.POST['added_date']
         )
-        return redirect('product_list')  # Перенаправление на список товаров
+        return redirect('product_list') 
     return render(request, 'create_product_form.html')
 
 
@@ -49,7 +49,7 @@ def create_order(request):
             order_date=order_date
         )
         order.products.set(products)
-        return redirect('order_list')  # Перенаправление на список заказов
+        return redirect('order_list') 
 
     clients = Client.objects.all()
     products = Product.objects.all()
