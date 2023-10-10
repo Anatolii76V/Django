@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список заказанных товаров</title>
+</head>
+<body>
+    <h1>Список заказанных товаров</h1>
+    <h2>За последние {{ period }} дней</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

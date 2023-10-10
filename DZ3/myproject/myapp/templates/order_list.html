@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список заказов</title>
+</head>
+<body>
+    <h1>Список заказов за последние {{ period }} дней</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.order_date }} - {{ order.product }} - {{ order.client }}</li>
+        {% empty %}
+            <li>Заказов не найдено.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
