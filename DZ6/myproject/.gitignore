@@ -1,0 +1,4 @@
+ /myapp/static/
+*.sqlite3
+*.log
+*.pyc
